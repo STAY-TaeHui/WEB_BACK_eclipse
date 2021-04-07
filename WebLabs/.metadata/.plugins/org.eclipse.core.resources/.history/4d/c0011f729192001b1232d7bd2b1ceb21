@@ -1,0 +1,64 @@
+package com;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class SimpleController
+ */
+
+/*
+ * web.xml 설정
+ * 
+ * 서블릿(java로 만든 웹서비스 파일)
+ * 서블릿 조건 : extends HttpServlet(상속) 필수 >> 웹 요청(request)객체, 응답(response)객체 사용 가능
+ * servlet은 url에서 바로 요청이 안된다. >> 요청을 하고 >> 맵핑하고 >. 요청 주소 생성
+ * 
+ *  - 맵핑방법 -
+ * 1. web.xml
+ * 2. @WebServlet
+ * 
+ * extends HttpServlet 반드시 상속(웹)
+ * SimpleController >> 서블릿파일 웹 전용
+ * servlet은 이벤트 기반 ( 이벤트가 발생하면 [자동 호출]되는 함수가 있다.)
+ * 
+ * 자동호출 함수!!! >> dotGet() , doPost() >> request가 get, post일때 자동 호출
+ * ex) <form method="get"> or <a href="/simple?num=1000> >>>>>>>>>>> GET방식
+ * ex) <form method="post"> or >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> POST방식
+ * 
+ * doGet(), doPOST() >> 데이터 받기(request, response)사용
+ * doGet(HttpServletRequest request, HttpServletResponse response) 파라미터로 request, response
+ * 	>> doGet함수 안에서 request,response를 사용할 수 있다.
+ * 
+ *
+ * 
+ * 
+ * 
+ * 
+ */
+public class SimpleController extends HttpServlet {//HttpServlet 상속
+	private static final long serialVersionUID = 1L;
+    public SimpleController() {
+        super();
+       
+    }
+
+	
+    //클라이언트의 요청이 get방식일때 실행
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("클라이언트 요청 : GET");
+		String id = request.getParameter("id");
+		System.out.println(id);
+	}
+
+	
+	//클라이언트의 요청이 post방식일때 실행
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("클라이언트 요청 : POST");
+	}
+
+}

@@ -1,0 +1,34 @@
+package kr.or.bit.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.sql.DataSource;
+
+public class mvcregisterdao {
+	
+	
+	//JNDI
+	Context context = new InitialContext(); //현재 프로젝에서 특정 이름을 가진 녀석을 검색(이름 기반 검색)
+	DataSource ds = (DataSource)context.lookup("java:comp/env/jdbc/oracle");  //java:comp/env/  +  jdbc/oracle   이름  => 정해진 약속
+	
+	//POOL 안에서  connection 가지고 오기
+	conn = ds.getConnection();
+	
+	
+	//CRUD
+	
+	//글쓰기
+	//writeOk()
+	public void writeOk(String id) {
+		PreparedStatement pstmt = null;
+		Connection conn= ds.getConnection();
+		
+		String sql = "insert into mvcregister(id, pwd, email) values(?,?,?)";	
+		
+	}
+	
+	
+}
