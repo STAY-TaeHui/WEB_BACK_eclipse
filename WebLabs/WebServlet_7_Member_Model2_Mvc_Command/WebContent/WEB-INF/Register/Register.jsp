@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="<%=request.getContextPath()%>/Register.do?cmd=registeok" method="POST">
+	<form action="${pageContext.request.contextPath }/Register.do?cmd=registeok" method="POST">
 		ID: <input type="text" name="id" placeholder="ID입력"><br>
 		PWD: <input type="password" name="pwd" placeholder="PWD입력">
 		EMAIL: <input type="text" name="email" placeholder="EMAIL입력">
