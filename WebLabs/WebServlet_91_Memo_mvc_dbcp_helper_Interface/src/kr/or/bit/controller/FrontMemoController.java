@@ -33,6 +33,12 @@ public class FrontMemoController extends HttpServlet {
     	String requestURI = request.getRequestURI();
     	String contextPath = request.getContextPath();
     	String url_Command = requestURI.substring(contextPath.length());
+    	/*
+    	 *  requestURI : /WebServlet_8_Member_Model2_Mvc_Url/MemoId.memo?id=admin
+			contextPath : /WebServlet_8_Member_Model2_Mvc_Url
+			urlcommand : /MemoId.memo
+    	 *
+    	 */
 	
     	Action action=null;
     	ActionForward forward=null;
