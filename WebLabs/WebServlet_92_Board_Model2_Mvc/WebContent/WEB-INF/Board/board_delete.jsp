@@ -44,7 +44,7 @@
 	%>
 	<div id="pageContainer">
 		<div style="padding-top: 25px; text-align: center">
-			<form name="del" method="POST" action="${pageContext.request.contextPath}/board_deleteok.do">
+			<form name="del" method="POST" action="board_deleteok.do">
 				<center>
 					비밀번호 :
 					<input type="password" name="pwd">

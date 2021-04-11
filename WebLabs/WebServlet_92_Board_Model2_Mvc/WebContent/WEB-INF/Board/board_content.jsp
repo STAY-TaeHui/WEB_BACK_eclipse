@@ -102,7 +102,7 @@
 							href="board_list.jsp?cp=<%=cpage%>&ps=<%=pagesize%>">목록가기</a> |<a
 							href="${pageContext.request.contextPath}/board_edit.do?idx=<%=idx%>&cp=<%=cpage%>&ps=<%=pagesize%>">편집</a>
 							|<a
-							href="board_delete.jsp?idx=<%=idx%>&cp=<%=cpage%>&ps=<%=pagesize%>">삭제</a>
+							href="${pageContext.request.contextPath}/board_delete.do?idx=<%=idx%>&cp=<%=cpage%>&ps=<%=pagesize%>">삭제</a>
 							|<a
 							href="${pageContext.request.contextPath}/Board_Write.do?idx=<%=idx%>&cp=<%=cpage%>&ps=<%=pagesize%>&subject=<%=board.getSubject()%>">답글</a>
 						</td>
