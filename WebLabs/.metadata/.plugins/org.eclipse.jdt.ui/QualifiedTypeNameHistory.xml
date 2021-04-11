@@ -43,4 +43,5 @@
     <fullyQualifiedTypeName name="kr.or.bit.service.Board_deleteokService"/>
     <fullyQualifiedTypeName name="kr.or.bit.service.Boardreply_deleteokService"/>
     <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
 </qualifiedTypeNameHistroy>

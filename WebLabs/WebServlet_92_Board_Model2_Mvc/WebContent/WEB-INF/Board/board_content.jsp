@@ -99,12 +99,12 @@
 					</tr>
 					<tr>
 						<td colspan="4" align="center"><a
-							href="${pageContext.request.contextPath}/Board_List.do?cp=<%=cpage%>&ps=<%=pagesize%>">목록가기</a> |<a
-							href="${pageContext.request.contextPath}/board_edit.do?idx=<%=idx%>&cp=<%=cpage%>&ps=<%=pagesize%>">편집</a>
+							href="Board_List.do?cp=<%=cpage%>&ps=<%=pagesize%>">목록가기</a> |<a
+							href="board_edit.do?idx=<%=idx%>&cp=<%=cpage%>&ps=<%=pagesize%>">편집</a>
 							|<a
-							href="${pageContext.request.contextPath}/board_delete.do?idx=<%=idx%>&cp=<%=cpage%>&ps=<%=pagesize%>">삭제</a>
+							href="board_delete.do?idx=<%=idx%>&cp=<%=cpage%>&ps=<%=pagesize%>">삭제</a>
 							|<a
-							href="${pageContext.request.contextPath}/Board_Rewirte.do?idx=<%=idx%>&cp=<%=cpage%>&ps=<%=pagesize%>&subject=<%=board.getSubject()%>">답글</a>
+							href="Board_Rewirte.do?idx=<%=idx%>&cp=<%=cpage%>&ps=<%=pagesize%>&subject=<%=board.getSubject()%>">답글</a>
 						</td>
 					</tr>
 				</table>

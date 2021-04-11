@@ -8,10 +8,9 @@
 <c:choose>
 	<c:when test = "${null ne msg && null ne url}">
 		<script>
-		
-		alert("${msg}");		
-	    location.href="${pageContext.request.contextPath}"+"/"+"${url}";
-	    //location.href="${url}";
-	</script>
+			alert("${msg}");		
+		    //location.href="${pageContext.request.contextPath}"+"/"+"${url}";
+		    location.href="${url}";
+		</script>
 	</c:when>
 </c:choose>
