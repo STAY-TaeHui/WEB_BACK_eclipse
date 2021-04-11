@@ -13,7 +13,6 @@
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="kr.or.bit.utils.SingletonHelper"/>
     <fullyQualifiedTypeName name="kr.or.bit.dao.memodao"/>
-    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
     <fullyQualifiedTypeName name="kr.or.bit.utils.ConnectionHelper"/>
     <fullyQualifiedTypeName name="java.sql.Connection"/>
     <fullyQualifiedTypeName name="javax.naming.Context"/>
@@ -39,4 +38,9 @@
     <fullyQualifiedTypeName name="kr.or.bit.dto.Board"/>
     <fullyQualifiedTypeName name="kr.or.bit.dto.Reply"/>
     <fullyQualifiedTypeName name="kr.or.bit.service.Board_replyokService"/>
+    <fullyQualifiedTypeName name="kr.or.bit.service.Board_rewriteokService"/>
+    <fullyQualifiedTypeName name="kr.or.bit.service.Board_editokService"/>
+    <fullyQualifiedTypeName name="kr.or.bit.service.Board_deleteokService"/>
+    <fullyQualifiedTypeName name="kr.or.bit.service.Boardreply_deleteokService"/>
+    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
 </qualifiedTypeNameHistroy>

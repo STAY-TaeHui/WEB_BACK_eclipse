@@ -13,19 +13,31 @@ public class Board_rewriteokService implements Action{
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		// TODO Auto-generated method stub
-		String subject = request.getParameter("subject");
-		String writer = request.getParameter("subject");
-		String email = request.getParameter("subject");
-		String homepage = request.getParameter("subject");
-		String content = request.getParameter("subject");
-		String pwd = request.getParameter("subject");
-		String filename = request.getParameter("subject");
 		
+		String subject = request.getParameter("subject");
+		String writer = request.getParameter("writer");
+		String email = request.getParameter("email");
+		String homepage = request.getParameter("homepage");
+		String content = request.getParameter("content");
+		String pwd = request.getParameter("pwd");
+		String filename = request.getParameter("filename");
+		
+		int idx = Integer.parseInt(request.getParameter("idx"));
 		String cpage = request.getParameter("cp"); //current page
 		String pagesize = request.getParameter("ps"); //pagesize
 		
 		Board dto = new Board();
+		System.out.println(subject);
+		System.out.println(writer);
+		System.out.println(email);
+		System.out.println(homepage);
+		System.out.println(content);
+		System.out.println(pwd);
 		
+		System.out.println(cpage);
+		System.out.println(pagesize);
+		
+		dto.setIdx(idx);
 		dto.setSubject(subject);
 		dto.setWriter(writer);
 		dto.setEmail(email);
@@ -34,10 +46,8 @@ public class Board_rewriteokService implements Action{
 		dto.setPwd(pwd);
 		dto.setFilename(filename);
 		
-		
-		
 		BoardDao dao = new BoardDao();
-		int result = dao.writeok(dto);
+		int result = dao.reWriteOk(dto);
 		
 		
 		 String msg="";

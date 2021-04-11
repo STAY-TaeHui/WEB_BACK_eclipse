@@ -30,19 +30,7 @@
 
 	<c:if test="${null eq idx || null eq subject || '' == fn:trim(idx) || '' == fn:trim(subject)}" >
 		<c:redirect url="Board_List.do"/>
-	</c:if>
-	<c:if test="${null eq idx}">
-		<c:out value="${idx}"/>
-	</c:if>
-	<c:if test="${null eq subject}">
-			<c:out value="${subject}"/>
-	
-	</c:if>
-	<c:if test = "${'' == fn:trim(idx)}">
-	</c:if>
-	<c:if test = "${'' == fn:trim(subject)}">
-	</c:if>
-	
+	</c:if>	
 	
 	<c:if test="${null eq cpage || null eq pagesize }">
 		<c:set var="cpage" value="1"/>
@@ -94,7 +82,7 @@
 	<jsp:include page="/include/header.jsp" />
 	<div id="pageContainer">
 		<div style="padding-top: 25px; text-align: center">
-			<form name="bbs" action="board_rewriteok.jsp" method="POST">
+			<form name="bbs" action="Board_Rewirteok.do" method="POST">
 			
 				<input type="hidden" name="cp" value="${cpage}" /> 
 				<input type="hidden" name="ps" value="${pagesize}" /> 
@@ -150,7 +138,7 @@
 						<td colspan="2" align="center">
 						<input type="button" 	value="글쓰기" onclick="boardcheck();" /> 
 						<input type="reset" 	value="다시쓰기" />
-						<a href="${pageContext.request.contextPath}/board/board_list.jsp">HOME</a>
+						<a href="${pageContext.request.contextPath}/Board_List.do">HOME</a>
 						</td>
 						
 					</tr>

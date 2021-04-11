@@ -27,9 +27,13 @@ public class Board_deleteokService implements Action {
 			String msg="";
 			String url="";
 			if(result > 0){
+				System.out.println("DELETE 성공");
+				
 				msg="delete success";
 				url="Board_List.do";
 			}else{
+				System.out.println("DELETE 실패");
+				
 				msg="delete fail";
 				url="Board_List.do";
 			}
@@ -37,6 +41,7 @@ public class Board_deleteokService implements Action {
 			
 			request.setAttribute("board_msg",msg);
 			request.setAttribute("board_url",url);
+			System.out.println("msg : " + msg +" url : " + url);
 			
 			if(msg != null && url != null){
 
@@ -47,7 +52,7 @@ public class Board_deleteokService implements Action {
 
 			 }
 			
-			  forward.setRedirect(false);
+			  forward.setRedirect(true);
 			  forward.setPath(url);
 			 
 		}catch (Exception e) {
