@@ -405,20 +405,21 @@ public class BoardDao {
 	}
 
 	//댓글 입력하기 (Table reply : fk(jspboard idx) )
-	public int replywrite(int idx_fk , String writer , String userid, String content,String pwd) {
+	public int replywrite(Reply replydata) {
 			Connection conn = null;
 			PreparedStatement pstmt = null;
 			int row = 0;
 			try {
+				
 				conn = ds.getConnection();
 				String sql="insert into reply(no,writer,userid,content,pwd,idx_fk) "+
 				           " values(reply_no.nextval,?,?,?,?,?)";
 				pstmt =conn.prepareStatement(sql);
-				pstmt.setString(1, writer);
-				pstmt.setString(2, userid);
-				pstmt.setString(3,content);
-				pstmt.setString(4, pwd);
-				pstmt.setInt(5, idx_fk);
+				pstmt.setString(1, replydata.getWriter());
+				pstmt.setString(2, replydata.getUserid());
+				pstmt.setString(3,replydata.getContent());
+				pstmt.setString(4, replydata.getPwd());
+				pstmt.setInt(5, replydata.getIdx_fk());
 				
 				row = pstmt.executeUpdate();
 			}catch (Exception e) {
@@ -431,7 +432,7 @@ public class BoardDao {
 					
 				}
 			}
-			
+			System.out.println("row : " + row);
 			return row;
 		}
 		

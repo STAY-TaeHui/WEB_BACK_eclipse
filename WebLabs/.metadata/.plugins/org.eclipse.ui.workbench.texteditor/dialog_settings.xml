@@ -8,13 +8,18 @@
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="ReadNum"/>
+		<item key="selection" value="idx"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="목록"/>
+			<item value="idx"/>
+			<item value="reply_check"/>
+			<item value="덧글"/>
+			<item value="cho"/>
 			<item value="readnum"/>
 			<item value="board"/>
 			<item value="edit"/>
@@ -25,11 +30,6 @@
 			<item value="line"/>
 			<item value="side"/>
 			<item value="downloa"/>
-			<item value="down"/>
-			<item value="logo"/>
-			<item value="height"/>
-			<item value="size"/>
-			<item value="color"/>
 		</list>
 		<list key="replacehistory">
 		</list>
@@ -37,8 +37,8 @@
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item key="DIALOG_X_ORIGIN" value="1436"/>
 		<item key="DIALOG_Y_ORIGIN" value="165"/>
-		<item key="DIALOG_WIDTH" value="340"/>
-		<item key="DIALOG_HEIGHT" value="454"/>
-		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+		<item key="DIALOG_WIDTH" value="288"/>
+		<item key="DIALOG_HEIGHT" value="391"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
 	</section>
 </section>

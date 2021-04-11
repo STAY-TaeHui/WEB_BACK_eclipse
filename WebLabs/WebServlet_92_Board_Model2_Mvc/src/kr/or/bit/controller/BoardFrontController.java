@@ -11,8 +11,9 @@ import javax.servlet.http.HttpServletResponse;
 
 import kr.or.bit.action.Action;
 import kr.or.bit.action.ActionForward;
+import kr.or.bit.service.Board_replyokService;
+import kr.or.bit.service.Board_rewriteokService;
 import kr.or.bit.service.Board_writeokService;
-import kr.or.bit.service.RegisterOkServiceAction;
 
 
 @WebServlet("*.do")
@@ -29,17 +30,20 @@ public class BoardFrontController extends HttpServlet {
     	String contextPath = request.getContextPath();
     	String urlcommand = requestURI.substring(contextPath.length());
     	/*
-    	 *  requestURI : /WebServlet_8_Member_Model2_Mvc_Url/Register.do
+    	    requestURI : /WebServlet_8_Member_Model2_Mvc_Url/Register.do
 			contextPath : /WebServlet_8_Member_Model2_Mvc_Url
+			
 			urlcommand : /Register.do 
-    	 *
+    	 
     	 */
+    	
+    	System.out.println("requestURI : " + requestURI);
+    	System.out.println("contextPath : " + contextPath);
+    	System.out.println("urlcommand : " + urlcommand);
     	
     	//kr.or.bit.service : 서비스클래스
     	Action action = null;
-    	
     	ActionForward forward = null;
-    	
     	
     	try {
 			if(urlcommand.equals("/Board_Write.do")) {
@@ -49,14 +53,38 @@ public class BoardFrontController extends HttpServlet {
 	    		forward.setPath("/WEB-INF/Board/board_write.jsp"); 
 	    	
 			}
-			else if(urlcommand.equals("/Board_Write.do")) {
-				System.out.println("THIS is Board_Write.do");
+			else if(urlcommand.equals("/Board_Writeok.do")) {
+				System.out.println("THIS is Board_Writeok.do");
 				forward = new ActionForward();
 				action=new Board_writeokService();
 	    		forward = action.execute(request, response);
 			}
+			else if(urlcommand.equals("/Board_Replyok.do")) {
+				System.out.println("THIS is Board_Replyok.do");
+				forward = new ActionForward();
+				action=new Board_replyokService();
+	    		forward = action.execute(request, response);
+			}
+			else if(urlcommand.equals("/Board_List.do") || urlcommand.equals("/board/Board_List.do")) {
+				System.out.println("THIS is Board_List.do");
+				forward = new ActionForward();
+	    		forward.setRedirect(false);
+	    		forward.setPath("/WEB-INF/Board/board_list.jsp"); 
+	    	
+			}
+			else if(urlcommand.equals("/board/Board_Rewirte.do")){
+				System.out.println("THIS is Board_Rewrite.do");
+				forward = new ActionForward();
+	    		forward.setRedirect(false);
+	    		forward.setPath("/WEB-INF/Board/board_rewrite.jsp"); 
+			}
+			else if(urlcommand.equals("/Board_Rewirteok.do")){
+				System.out.println("THIS is Board_Rewriteok.do");
+				forward = new ActionForward();
+				action=new Board_rewriteokService();
+	    		forward = action.execute(request, response);
+	    		}
 		} catch (Exception e) {
-			// TODO: handle exception
     		System.out.println(e.getMessage());
 		}
     	

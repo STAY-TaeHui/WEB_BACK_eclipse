@@ -15,6 +15,7 @@
 <body>
 	<%
 		String idx= request.getParameter("idx"); //글번호 받기
+		System.out.println("idx : " + idx);
 		
 		//글 번호를 가지고 오지  않았을 경우 예외처리
 		if(idx == null || idx.trim().equals("")){
@@ -103,12 +104,12 @@
 							|<a
 							href="board_delete.jsp?idx=<%=idx%>&cp=<%=cpage%>&ps=<%=pagesize%>">삭제</a>
 							|<a
-							href="board_rewrite.jsp?idx=<%=idx%>&cp=<%=cpage%>&ps=<%=pagesize%>&subject=<%=board.getSubject()%>">답글</a>
+							href="Board_Rewirte.do?idx=<%=idx%>&cp=<%=cpage%>&ps=<%=pagesize%>&subject=<%=board.getSubject()%>">답글</a>
 						</td>
 					</tr>
 				</table>
 				<!--  꼬리글 달기 테이블 -->
-				<form name="reply" action="board_replyok.jsp" method="POST">
+				<form name="reply" action="Board_Replyok.do" method="POST">
 						<!-- hidden 태그  값을 숨겨서 처리  -->
 						<input type="hidden" name="idx" value="<%=idx%>"> 
 						<input type="hidden" name="userid" value=""><!-- 추후 필요에 따라  -->

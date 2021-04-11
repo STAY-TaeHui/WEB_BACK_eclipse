@@ -35,7 +35,7 @@
     String url="";
     if(result > 0){
     	msg ="rewrite insert success";
-    	url ="board_list.jsp";
+    	url ="Board_List.do";
     }else{
     	msg="rewrite insert fail";
     	url="board_content.jsp?idx="+board.getIdx();

@@ -36,4 +36,7 @@
     <fullyQualifiedTypeName name="java.lang.Exception"/>
     <fullyQualifiedTypeName name="kr.or.bit.action.Action"/>
     <fullyQualifiedTypeName name="kr.or.bit.service.Board_writeokService"/>
+    <fullyQualifiedTypeName name="kr.or.bit.dto.Board"/>
+    <fullyQualifiedTypeName name="kr.or.bit.dto.Reply"/>
+    <fullyQualifiedTypeName name="kr.or.bit.service.Board_replyokService"/>
 </qualifiedTypeNameHistroy>

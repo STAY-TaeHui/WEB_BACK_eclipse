@@ -53,7 +53,8 @@ public class BoardService {
 		
 		//서비스 요청(댓글 입력하기)
 		public int replyWrite(int idx_fk,String writer,String userid, String content,String pwd) throws NamingException {
-			return new BoardDao().replywrite(idx_fk, writer, userid, content, pwd);
+			//return new BoardDao().replywrite(idx_fk, writer, userid, content, pwd);
+			return 1;
 		}
 		
 		//서비스 요청(댓글 목록 조회하기)
