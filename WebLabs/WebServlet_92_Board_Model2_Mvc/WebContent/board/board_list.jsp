@@ -150,7 +150,7 @@
 					
 						<!--이전 링크 --> 
 						<c:if test="${cpage > 1}">
-							<a href="Board_List.do?cp=${cpage-1}&ps=${pagesize}">이전</a>
+							<a href="board_list.jsp?cp=${cpage-1}&ps=${pagesize}">이전</a>
 						</c:if>
 						<!-- page 목록 나열하기 -->
 						<c:forEach var="i" begin="1" end="${pagecount}" step="1">
@@ -159,13 +159,13 @@
 										<font color="red" >[${i}]</font>
 								</c:when>
 								<c:otherwise>
-									<a href="Board_List.do?cp=${i}&ps=${pagesize}">[${i}]</a>
+									<a href="board_list.jsp?cp=${i}&ps=${pagesize}">[${i}]</a>
 								</c:otherwise>
 							</c:choose>
 						</c:forEach>
 						<!--다음 링크 --> 
 						<c:if test="${cpage < pagecount}">
-							<a href="Board_List.do?cp=${cpage+1}&ps=${pagesize}">다음</a>
+							<a href="board_list.jsp?cp=${cpage+1}&ps=${pagesize}">다음</a>
 						</c:if>
 					</td>
 					<td colspan="2" align="center">총 게시물 수 : <%= totalboardcount %>
@@ -175,7 +175,7 @@
 					<td colspan="5" align="center">
 					<%
 						int pagersize=3; //[1][2][3]
-						ThePager pager = new ThePager(totalboardcount,cpage,pagesize,pagersize,"Board_List.do");
+						ThePager pager = new ThePager(totalboardcount,cpage,pagesize,pagersize,"board_list.jsp");
 					%>
 					<%= pager.toString() %>
 					</td>

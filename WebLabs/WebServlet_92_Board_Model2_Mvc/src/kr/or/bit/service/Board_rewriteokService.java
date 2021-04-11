@@ -21,6 +21,9 @@ public class Board_rewriteokService implements Action{
 		String pwd = request.getParameter("subject");
 		String filename = request.getParameter("subject");
 		
+		String cpage = request.getParameter("cp"); //current page
+		String pagesize = request.getParameter("ps"); //pagesize
+		
 		Board dto = new Board();
 		
 		dto.setSubject(subject);
@@ -31,12 +34,14 @@ public class Board_rewriteokService implements Action{
 		dto.setPwd(pwd);
 		dto.setFilename(filename);
 		
+		
+		
 		BoardDao dao = new BoardDao();
 		int result = dao.writeok(dto);
 		
 		
 		 String msg="";
-		    String url="";
+		 String url="";
 		    if(result > 0){
 		    	msg ="insert success";
 		    	url ="Board_List.do";

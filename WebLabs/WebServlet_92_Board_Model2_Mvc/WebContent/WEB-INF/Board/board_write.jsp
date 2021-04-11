@@ -37,9 +37,7 @@ function check(){
 </SCRIPT>
 </head>
 <body>
-	 <%
-        pageContext.include("/include/header.jsp");
-     %>
+     <jsp:include page="/include/header.jsp" />
 
     <div id="pageContainer">
         <div style="padding-top: 25px; text-align: center">

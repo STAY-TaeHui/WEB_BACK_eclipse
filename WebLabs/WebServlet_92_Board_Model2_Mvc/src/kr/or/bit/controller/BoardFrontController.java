@@ -65,7 +65,7 @@ public class BoardFrontController extends HttpServlet {
 				action=new Board_replyokService();
 	    		forward = action.execute(request, response);
 			}
-			else if(urlcommand.equals("/Board_List.do") || urlcommand.equals("/board/Board_List.do")) {
+			else if(urlcommand.equals("/Board_List.do")) {
 				System.out.println("THIS is Board_List.do");
 				forward = new ActionForward();
 	    		forward.setRedirect(false);
@@ -84,6 +84,9 @@ public class BoardFrontController extends HttpServlet {
 				action=new Board_rewriteokService();
 	    		forward = action.execute(request, response);
 	    		}
+			else {
+				System.out.println("This is Controller");
+			}
 		} catch (Exception e) {
     		System.out.println(e.getMessage());
 		}
