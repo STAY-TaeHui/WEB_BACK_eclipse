@@ -6,6 +6,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\masta\Desktop\mvc2\MVC2_Board_Master"/>
 			<item value="D:\WEB\sleek-dashboard"/>
 			<item value="D:\WEB\Sleek-v-1-0"/>
 			<item value="D:\WEB\WebBack_eclips\WebLabs\WebJSP_JDBC_HomeWork"/>
