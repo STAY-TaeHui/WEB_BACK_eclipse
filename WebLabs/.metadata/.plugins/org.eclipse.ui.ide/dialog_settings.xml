@@ -19,6 +19,12 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="D:\masta\downloads\WebServlet_Team1_Board_Model2_Mvc"/>
+			<item value="D:\masta\downloads\WebLabs\Emp2_Model2_Mvc_Team1"/>
+			<item value="D:\masta\downloads\WebLabs\Emp_Model2_Mvc_Team1"/>
+			<item value="D:\masta\downloads\WebLabs.selection (3)\WebServlet_93_Board_Mvc_Action_Notice_New1"/>
+			<item value="D:\masta\downloads\WebServlet_93_Board_Mvc_Action_Notice_New"/>
+			<item value="D:\masta\downloads\WebServlet_92_FileUpload"/>
 			<item value="D:\masta\downloads\WebServlet_5_Board_Model1_Sample"/>
 			<item value="D:\masta\downloads\WebLabs.selection (2)\WebServlet_91_Memo_mvc_dbcp_helper_Interface-teacher&apos;s"/>
 			<item value="D:\masta\downloads\WebLabs.selection (2)\WebServlet_91_Filter"/>

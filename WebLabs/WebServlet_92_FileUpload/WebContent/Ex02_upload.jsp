@@ -49,6 +49,7 @@ cos.jar 에서 다중 파일 업로드를 지원하는 객체가 바로 >> Multi
 	
 	//업로드 파일에 대한 기본 정보 세팅
 	int size = 1024*1024*10; //10MB 네이버 계산기
+	
 	String name="";
 	String title="";
 	String filename1="";
@@ -70,7 +71,6 @@ cos.jar 에서 다중 파일 업로드를 지원하는 객체가 바로 >> Multi
 	//2가지 필요
 	//1. 서버에 파일 업로드
 	//2. 작석자, 제목, 내용 파일명, 파일사이즈를 DB insert하는 작업 >> MultipartRequest에서 뽑아야됨
-	
 	name = multi.getParameter("name");
 	title = multi.getParameter("title");
 	String hid = multi.getParameter("hid");

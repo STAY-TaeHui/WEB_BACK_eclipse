@@ -8,13 +8,21 @@
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="submit"/>
+		<item key="selection" value="size"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="size"/>
+			<item value="크기"/>
+			<item value="사이즈"/>
+			<item value="filename1"/>
+			<item value="cont"/>
+			<item value="list"/>
+			<item value="ㅣㅑㄴㅅ"/>
+			<item value="insert"/>
 			<item value="submit"/>
 			<item value="sub"/>
 			<item value=".do"/>
@@ -22,24 +30,16 @@
 			<item value="im"/>
 			<item value="utf"/>
 			<item value="set"/>
-			<item value="url_command"/>
-			<item value="답"/>
-			<item value="총"/>
-			<item value="마지막"/>
-			<item value="다음"/>
-			<item value="이전"/>
-			<item value="목록"/>
-			<item value="괄호"/>
 		</list>
 		<list key="replacehistory">
 			<item value="urlcommand"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="1474"/>
-		<item key="DIALOG_Y_ORIGIN" value="388"/>
-		<item key="DIALOG_WIDTH" value="288"/>
-		<item key="DIALOG_HEIGHT" value="391"/>
-		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+		<item key="DIALOG_X_ORIGIN" value="676"/>
+		<item key="DIALOG_Y_ORIGIN" value="262"/>
+		<item key="DIALOG_WIDTH" value="340"/>
+		<item key="DIALOG_HEIGHT" value="454"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
 	</section>
 </section>
