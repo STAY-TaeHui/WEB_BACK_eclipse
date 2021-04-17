@@ -31,7 +31,8 @@ public class BoardEditService implements Action {
 			
 			//BoardService service = BoardService.getInBoardService();
 			Board board = dao.getEditContent(idx);
-			
+			 
+			 
 			if(board == null){
 				msg ="데이터 오류";
 				url ="BoardList.do";
@@ -44,6 +45,13 @@ public class BoardEditService implements Action {
 				forward.setPath("/WEB-INF/views/board/redirect.jsp");
 				
 			}else {
+				if(board.getFilename()!=null) {// 현재 게시판에 첨부파일이 있다면 DB에서 파일명만 뽑아내기 
+					  String uploadpath = request.getSession().getServletContext().getRealPath("upload"); 
+//					  filename = filename.substring(uploadpath.length()+1);
+//					  board.setFilename(filename);
+					  String filename = board.getFilename().substring(uploadpath.length()+1);
+					  board.setFilename(filename);
+				}
 				request.setAttribute("idx", idx);
 				request.setAttribute("board", board);
 				

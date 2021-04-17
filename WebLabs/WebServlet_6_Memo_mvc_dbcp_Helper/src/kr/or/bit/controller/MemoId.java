@@ -38,7 +38,7 @@ public class MemoId extends HttpServlet {
     	
     	//"false" or  "true"
     	//KEY POINT
-    	out.print(ischeck);
+    	out.print(ischeck); 
     	
     	//http://localhost:8090/WebServlet_4_Memo_mvc/MemoId?id=admin
     	

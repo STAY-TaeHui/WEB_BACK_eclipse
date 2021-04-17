@@ -107,21 +107,7 @@
 							return false;
 						}
 					//frm.submit();
-					$.ajax({
-						url:"ReplyokServlet",
-						data : 
-							{
-								idx:${idx},
-								reply_writer : $("#reply_writer").val(),
-								reply_content : $("#reply_content").val(),
-								reply_pwd : $("#reply_pwd").val()
-							},
-						dataType:,
-						success:function(responsedata){
-							
-						}
-						
-					})
+					ajadd();
 					
 					}					
 					function reply_del(frm, no, idx) {

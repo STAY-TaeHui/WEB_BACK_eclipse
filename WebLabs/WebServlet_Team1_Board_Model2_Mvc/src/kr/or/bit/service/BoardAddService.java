@@ -66,19 +66,22 @@ public class BoardAddService implements Action {
 		String homepage = multi.getParameter("homepage");
 		String content = multi.getParameter("content");
 		String pwd = multi.getParameter("pwd");
-		int filesize = (int)multi.getFile(file1).length(); //파일의 크기
-		
+		int filesize=0;		
 		int result = 0;
 
 		Board board = new Board();
 		
+		if(multi.getFile(file1)!=null){
+			filesize=(int)multi.getFile(file1).length(); //파일의 크기
+			board.setFilename(realPath);
+		}
 		board.setSubject(subject);
 		board.setWriter(writer);
 		board.setEmail(email);
 		board.setHomepage(homepage);
 		board.setContent(content);
 		board.setPwd(pwd);
-		board.setFilename(realPath);
+		
 		board.setFilesize(filesize);
 		
 		System.out.println(subject);

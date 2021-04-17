@@ -58,7 +58,7 @@ public class BoardContentService implements Action {
 				
 				
 				  String filename = board.getFilename();
-				  if(!filename.equals("") || filename!=null) {// 현재 게시판에 첨부파일이 있다면 DB에서 파일명만 뽑아내기 
+				  if(filename!=null) {// 현재 게시판에 첨부파일이 있다면 DB에서 파일명만 뽑아내기 
 					  String uploadpath = request.getSession().getServletContext().getRealPath("upload"); 
 //					  filename = filename.substring(uploadpath.length()+1);
 //					  board.setFilename(filename);

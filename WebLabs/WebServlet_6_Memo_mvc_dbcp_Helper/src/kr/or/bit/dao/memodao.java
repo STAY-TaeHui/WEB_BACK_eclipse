@@ -100,7 +100,7 @@ public class memodao {
 	
 	//삽입
 	//public int insertMemo(String id, String email , String content) parameter 객체 ...
-	public int insertMemo(memo m) {
+	public int insertMemo(memo m){
 		
 		Connection conn = null;
 		int resultrow=0;
@@ -120,7 +120,7 @@ public class memodao {
 				pstmt.setString(2,m.getEmail());
 				pstmt.setString(3,m.getContent());
 				
-				resultrow = pstmt.executeUpdate();
+				resultrow = pstmt.executeUpdate();  //3 2 6 85 
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -167,11 +167,14 @@ public class memodao {
 			
 			  //POOL
 			  conn = ConnectionHelper.getConnection("oracle");
+			  
+			  
 			
 			  pstmt = conn.prepareStatement(sql);
 			  pstmt.setString(1, id);
-			  		
-			  rs = pstmt.executeQuery();
+			  
+			  
+			  rs = pstmt.executeQuery(); //select -> 여러개     //executeUpdate : insert/update/delete -> 3 -> int
 			  if(rs.next()) {
 				  //같은 ID 존재
 				  ismemoid = "false";

@@ -41,7 +41,7 @@ public class MemoList extends HttpServlet {
     		//화면에 출력해서 Client 전달
     		//View 사용 (JSP)
     		
-    		//데이터 저장
+    		//데이터 저장				key			value
     		request.setAttribute("memolist", memolist);
     		
     		//view 페이지 설정

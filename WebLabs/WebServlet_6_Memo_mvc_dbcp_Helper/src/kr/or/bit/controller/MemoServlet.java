@@ -37,10 +37,12 @@ public class MemoServlet extends HttpServlet {
     	//4. 결과
     	
     	request.setCharacterEncoding("UTF-8");
-    	
-    	String id = request.getParameter("id");
-    	String email = request.getParameter("email");
-    	String content = request.getParameter("content");
+    	//     /MemoServlet?id=123&email=456&content=789
+    	//key value
+    	//?key=value&key=value....
+    	String id = request.getParameter("id");    //123
+    	String email = request.getParameter("email");//456
+    	String content = request.getParameter("content");//789
     	
     	System.out.println(id + " / " + email + " / " + content);
     	
